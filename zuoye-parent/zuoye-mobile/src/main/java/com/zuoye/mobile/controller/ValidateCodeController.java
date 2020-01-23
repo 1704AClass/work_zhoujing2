@@ -6,14 +6,18 @@ import org.springframework.web.bind.annotation.RestController;
 import redis.clients.jedis.JedisPool;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zuoye.utils.MessageConstant;
+import com.zuoye.utils.RedisMessageConstant;
 import com.zuoye.utils.Result;
+import com.zuoye.utils.SMSUtils;
+import com.zuoye.utils.ValidateCodeUtils;
 
 @RestController
 @RequestMapping("/validateCode")
 public class ValidateCodeController {
 
-	/*@Reference
-	private JedisPool jedisPool;*/
+	@Reference
+	private JedisPool jedisPool;
 	
 	/*//用户在线体检预约发送验证码
     @RequestMapping("/send4Order")
@@ -31,7 +35,7 @@ public class ValidateCodeController {
         jedisPool.getResource().setex(telephone + RedisMessageConstant.SENDTYPE_ORDER,300,validateCode.toString());
         return new Result(true,MessageConstant.SEND_VALIDATECODE_SUCCESS);
     }
-
+*/
     //用户手机快速登录发送验证码
     @RequestMapping("/send4Login")
     public Result send4Login(String telephone){
@@ -47,5 +51,5 @@ public class ValidateCodeController {
         //将验证码保存到redis（5分钟）
         jedisPool.getResource().setex(telephone + RedisMessageConstant.SENDTYPE_LOGIN,300,validateCode.toString());
         return new Result(true,MessageConstant.SEND_VALIDATECODE_SUCCESS);
-    }*/
+    }
 }

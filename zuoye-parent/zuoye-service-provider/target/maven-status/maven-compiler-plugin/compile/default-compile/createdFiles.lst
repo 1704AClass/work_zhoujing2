@@ -1,4 +1,6 @@
-com\zuoye\service\impl\OrderSettingServiceimpl.class
+com\zuoye\service\impl\MemberServiceimpl.class
 com\zuoye\service\impl\Checkitemimpl.class
 com\zuoye\service\impl\SetmealServiceimpl.class
+com\zuoye\service\impl\OrderSettingServiceimpl.class
 com\zuoye\service\impl\CheckgroupServiceimpl.class
+com\zuoye\service\impl\OrderServiceimpl.class

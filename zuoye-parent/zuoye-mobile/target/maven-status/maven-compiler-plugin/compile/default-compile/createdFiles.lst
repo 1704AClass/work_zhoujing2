@@ -1,2 +1,5 @@
-com\zuoye\mobile\controller\SetmealController.class
 com\zuoye\mobile\controller\ValidateCodeController.class
+com\zuoye\mobile\controller\OrderController.class
+com\zuoye\mobile\controller\SetmealController.class
+com\zuoye\mobile\controller\MemberController.class
+com\zuoye\mobile\controller\UserController.class
